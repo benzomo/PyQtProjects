@@ -1,0 +1,110 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file '.\qt\balancesheet.ui'
+#
+# Created by: PyQt5 UI code generator 5.9
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_BalanceSheet(object):
+    def setupUi(self, BalanceSheet):
+        BalanceSheet.setObjectName("BalanceSheet")
+        BalanceSheet.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(BalanceSheet)
+        self.centralwidget.setObjectName("centralwidget")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(530, 480, 75, 23))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(450, 480, 75, 23))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.listWidget = QtWidgets.QListWidget(self.centralwidget)
+        self.listWidget.setGeometry(QtCore.QRect(5, 21, 131, 541))
+        self.listWidget.setObjectName("listWidget")
+        self.horizontalSlider = QtWidgets.QSlider(self.centralwidget)
+        self.horizontalSlider.setGeometry(QtCore.QRect(360, 50, 160, 22))
+        self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider.setObjectName("horizontalSlider")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setGeometry(QtCore.QRect(150, 70, 561, 401))
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.tableView = QtWidgets.QTableView(self.tab)
+        self.tableView.setGeometry(QtCore.QRect(30, 30, 451, 301))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(236, 255, 16))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(236, 255, 16))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(240, 240, 240))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        self.tableView.setPalette(palette)
+        self.tableView.setProperty("backgroundColor", QtGui.QColor(170, 85, 255))
+        self.tableView.setObjectName("tableView")
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.widget = QtWidgets.QWidget(self.tab_2)
+        self.widget.setGeometry(QtCore.QRect(5, 1, 491, 371))
+        self.widget.setObjectName("widget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.listView = QtWidgets.QListView(self.widget)
+        self.listView.setObjectName("listView")
+        self.horizontalLayout.addWidget(self.listView)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.tableView_2 = QtWidgets.QTableView(self.widget)
+        self.tableView_2.setObjectName("tableView_2")
+        self.horizontalLayout.addWidget(self.tableView_2)
+        self.tabWidget.addTab(self.tab_2, "")
+        self.pushButton.raise_()
+        self.pushButton_2.raise_()
+        self.listWidget.raise_()
+        self.horizontalSlider.raise_()
+        self.tabWidget.raise_()
+        self.listView.raise_()
+        BalanceSheet.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(BalanceSheet)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
+        self.menubar.setObjectName("menubar")
+        BalanceSheet.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(BalanceSheet)
+        self.statusbar.setObjectName("statusbar")
+        BalanceSheet.setStatusBar(self.statusbar)
+        self.dockWidget = QtWidgets.QDockWidget(BalanceSheet)
+        self.dockWidget.setObjectName("dockWidget")
+        self.dockWidgetContents = QtWidgets.QWidget()
+        self.dockWidgetContents.setObjectName("dockWidgetContents")
+        self.dockWidget.setWidget(self.dockWidgetContents)
+        BalanceSheet.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.dockWidget)
+
+        self.retranslateUi(BalanceSheet)
+        self.tabWidget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(BalanceSheet)
+
+    def retranslateUi(self, BalanceSheet):
+        _translate = QtCore.QCoreApplication.translate
+        BalanceSheet.setWindowTitle(_translate("BalanceSheet", "MainWindow"))
+        self.pushButton.setText(_translate("BalanceSheet", "PushButton"))
+        self.pushButton_2.setText(_translate("BalanceSheet", "PushButton"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("BalanceSheet", "Tab 1"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("BalanceSheet", "Tab 2"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    BalanceSheet = QtWidgets.QMainWindow()
+    ui = Ui_BalanceSheet()
+    ui.setupUi(BalanceSheet)
+    BalanceSheet.show()
+    sys.exit(app.exec_())
+
